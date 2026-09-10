@@ -14,7 +14,9 @@ public enum Color {
     WHITE,
     BLACK;
 
-    /** The side whose turn it is after this one moves. */
+    /**
+     * The side whose turn it is after this one moves.
+     */
     public Color opposite() {
 
         if (this == WHITE) {
@@ -37,7 +39,10 @@ public enum Color {
             return -1;
         }
     }
-    /** The rank pawns of this color start on (0-based). */
+
+    /**
+     * The rank pawns of this color start on (0-based).
+     */
     public int pawnStartRank() {
         if (this == WHITE) {
             return 1;
@@ -45,11 +50,15 @@ public enum Color {
             return 6;
         }
     }
-    /** The rank a pawn of this color must reach to promote (0-based). */
+
+    /**
+     * The rank a pawn of this color must reach to promote (0-based).
+     */
     public int promotionRank() {
         if (this == WHITE) {
             return 7;
         } else {
             return 0;
         }
-    }}
+    }
+}
