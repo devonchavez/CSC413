@@ -26,6 +26,7 @@ public record Position(int file, int rank) {
         int newFile = file + fileDelta;
         int newRank = rank + rankDelta;
 
+        //makes sure movement isnt off the board
        if (!isOnBoard(newFile, newRank)) {
            return null;
        }
